@@ -1,0 +1,21 @@
+{
+  "name": "board",
+  "version": "1.0.0",
+  "main": "surer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"nodemon server.js\" \"npx tailwindcss -i ./page/css/tailwind.css -o ./public/index.css --watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.1",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongodb": "^6.1.0",
+    "nodemon": "^3.0.1"
+  },
+  "description": ""
+}
