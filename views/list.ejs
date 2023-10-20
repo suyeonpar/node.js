@@ -11,8 +11,20 @@
     <% for(let i =0; i < data.length; i++){ %>
     <ul class="flex justify-between items-center border">
         <li class="basis-2/4"><a href="/view/<%= data[i]._id %>"><%= data[i].title %></a></li>
-        <li class="basis-2/4"><%= data[i].content %></li>
+        <li class="basis-2/4"><%= data[i].content %> <a href="/edit/<%= data[i]._id %>">✏</a><a href="javascript:deleteFun('<%= data[i]._id %>')">🗑</a></li>
     </ul>
     <% } %>
+    <a href="/write" class="text-2xl ml-6 bg-blue-500 w-5 h-10 rounded-md text-white p-1 mt-2">글쓰기</a>
+    
+    <script>
+        function deleteFun(data){
+            let confirmChk = confirm("정말 삭제하시겠습니까?")
+            //console.log(confirmChk)
+
+            if(confirmChk){
+                window.location.href = '/delete/'+data
+            }
+        }
+    </script>
 </body>
 </html>
