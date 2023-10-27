@@ -163,6 +163,7 @@ passport.use(new LocalStrategy({
     })
     //console.log(result)
     //cb는 도중에 실행한다
+    
     if(!result){
         return cb(null, false, {Message: "아이디나 비밀번호가 일치하지않습니다."})
     }
